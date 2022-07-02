@@ -1,0 +1,13 @@
+.hero {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 200px 0;
+    text-align: center;
+
+    background-color: getColor('bg-footer');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+
+    &__title {
+        margin-bottom: 30px;
+    }
+}

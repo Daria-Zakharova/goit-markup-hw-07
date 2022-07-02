@@ -1,0 +1,27 @@
+$colors: (
+    'accent': #2196f3,
+    'button-hover': #188ce8,
+
+    'bg': #ffffff,
+    'bg-section': #f5f4fa,
+    'bg-footer': #2f303a,
+
+    'icon': #afb1b8,
+    'border-input': #21212133,
+
+    'txt': #757575,
+    'txt-secondary': #ffffff,
+    'txt-title': #212121
+);
+
+$width-container: 1200px;
+
+$section-pad: 94px;
+$gap: 30px;
+$gap-negative: -$gap;
+
+$border-r: 4px;
+
+$time-transition: 250ms;
+$cubic: cubic-bezier(.4, 0, .2, 1);
+

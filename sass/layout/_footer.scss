@@ -1,0 +1,45 @@
+.footer {
+    padding: 60px 0;
+
+    background-color: getColor('bg-footer');
+    color: getColor('txt-secondary');
+
+    &__wrap {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 20px;
+
+        color: getColor('txt-secondary');
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        
+        @include font-title(14px, 16px, .03em, 700, uppercase);
+    }
+
+    &__contacts {
+        margin-right: 70px;
+    }
+
+    &__socials {
+        padding: 0;
+    }
+
+    &__social-link {
+        background-color: #ffffff10;
+        color: getColor('txt-secondary');
+    }
+
+    &__join {
+        margin-right: 93px;
+    }
+
+    &__subscribe {
+        flex-grow: 1;
+    }
+}

@@ -1,0 +1,23 @@
+.clients {
+    @include row-page-width(6);
+    
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        @extend %centered;
+
+        padding: 19px;
+        color: getColor('icon');
+        fill: currentColor;
+        border: 1px solid currentColor;
+        border-radius: $border-r;
+
+        @include transition(color);
+
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: getColor('bg');
+    border-bottom: 1px solid #ececec;
+
+    .no-scroll &{
+        position: static;
+    }
+
+    &__container {
+        width: $width-container;
+    }
+
+    &,
+    &__container,
+    &__menu,
+    &__nav,
+    &__contacts {
+        @extend %centeredY;
+    }
+
+    &__logo {
+        display: block;
+
+        margin-right: 93px;
+        padding: 24px 0;
+    }
+
+    &__contacts {
+        margin-left: auto;
+    }
+}
+

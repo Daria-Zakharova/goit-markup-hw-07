@@ -1,0 +1,86 @@
+@use 'sass:math';
+
+@mixin font($fs: 14px, $lh: 24px, $ls: .03em) {
+    line-height: calcLineHeight($fs, $lh);
+    font-size: $fs;
+    letter-spacing: $ls;
+}
+
+//math.div(math.round(math.div($lh, $fs)*10000), 10000)
+
+
+@mixin font-title($fs, $lh, $ls: .03em, $fw: 700, $tt: none) {
+
+    line-height: calcLineHeight($fs, $lh);
+    font-size: $fs;
+    letter-spacing: $ls;
+    font-weight: $fw;
+    text-transform: #{$tt};
+}
+
+@mixin transition($property) {
+    transition-property: $property;
+    transition-duration: $time-transition;
+    transition-timing-function: $cubic;
+}
+
+// navigation + contacts
+@mixin header-style() {
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &__link {
+        padding: 32px 0;
+
+        @include font-title(14px, 16px, .02em, 500);
+        @include transition(color);
+
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+        }
+    }
+}
+
+@mixin row($margin) {
+    & {
+        display: flex;
+        margin-right: -$margin;
+
+        &__item {
+        margin-right: $margin;
+        }
+    }
+}
+
+@mixin row-page-width($amount, $margin-child:$gap, $margin-parent:$gap-negative) {
+    &__row {
+        display: flex;
+        margin-right: $margin-parent;
+    }
+    
+    &__cell {
+            flex-basis: calc((100% - $amount*$gap)/$amount);
+            margin-right: $margin-child;
+    }
+    
+}
+
+@mixin grid($amount-in-row, $margin-child: $gap, $margin-parent: $gap-negative) {
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: $margin-parent;
+        margin-bottom: $margin-parent;
+    }
+
+
+        
+    &__cell {
+        flex-basis: calc((100% - $amount-in-row*$gap)/$amount-in-row);
+        margin-right: $margin-child;
+        margin-bottom: $margin-child;
+    }
+
+}

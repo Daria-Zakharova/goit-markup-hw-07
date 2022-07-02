@@ -1,0 +1,12 @@
+.contacts {
+    @include header-style();
+
+    &__link {
+        @extend %centeredY;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}
