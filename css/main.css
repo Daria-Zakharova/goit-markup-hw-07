@@ -747,9 +747,6 @@ body {
   margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
-.address__link:hover, .address__link:focus {
-  color: #2196f3;
-}
 
 .filters {
   margin-bottom: 50px;
