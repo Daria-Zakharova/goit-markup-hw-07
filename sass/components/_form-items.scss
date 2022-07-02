@@ -19,7 +19,7 @@
         border: 1px solid getColor('border-input');
         border-radius: $border-r;
 
-        @include transition('border-color');
+        @include transition(border-color);
 
         .input-group:focus-within &,
         &:hover {
@@ -48,7 +48,7 @@
         transform: translateY(-50%);
 
         fill: getColor('txt-title');
-        @include transition('fill');
+        @include transition(fill);
 
         .input-group:focus-within &,
         .input-group__field:hover + & {
